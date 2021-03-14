@@ -6,11 +6,14 @@
 /*   By: jean-phil <jemartel@student.42quebec>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/14 15:46:11 by jean-phil         #+#    #+#             */
-/*   Updated: 2021/03/14 15:47:14 by jean-phil        ###   ########.fr       */
+/*   Updated: 2021/03/14 17:10:22 by jean-phil        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "unistd.h"
-int main(void)
+
+void	rush(int, int);
+
+int 	main(void)
 {
-	
+	 rush (5, 5);
 }
