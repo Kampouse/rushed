@@ -6,7 +6,7 @@
 /*   By: jean-phil <jemartel@student.42quebec>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/12 18:07:16 by jean-phil         #+#    #+#             */
-/*   Updated: 2021/03/13 09:00:09 by jean-phil        ###   ########.fr       */
+/*   Updated: 2021/03/14 12:29:34 by jean-phil        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,59 +25,86 @@ void	ft_print_top(int squar_witdh,char corner)
 	int iterator;
 	iterator = 1;
       ft_print_fn(corner);
-	while (iterator  <= squar_witdh )
-	{
-    ft_print_fn('b');
-		++iterator;
-	}
-     if(squar_witdh > 0)
-	{
-      ft_print_fn(corner);
-	}
+if(squar_witdh > 2)
+{
+	while (++iterator  <= squar_witdh )
+		{ 	
+    	ft_print_fn('C');
+		}
+}
   if (iterator != squar_witdh)
 	  {	
       ft_print_fn('\n');
 	  }
 }
-void	ft_print_middle(int squar_witdh)
+void	ft_print_middle(int squar_witdh,char corner,char middle)
 {
 	int iterator;
 	iterator = 1;
-      ft_print_fn('b');
-	while (iterator  <= squar_witdh )
+		if(squar_witdh > 0)
 	{
-    ft_print_fn(' ');
+      ft_print_fn(corner);
+	}
+	
+	while (iterator  <= squar_witdh)
+	{
+    ft_print_fn(middle);
 		++iterator;
+		if(iterator == squar_witdh)
+		{
+			ft_print_fn(corner);
+		}
 	}
-	if(squar_witdh > 0)
-	{
-      ft_print_fn('B');
-	}
-	  
-	  	
       ft_print_fn('\n');
 	  
 }
 
 void ft_print_height(int  height,int middle_widht)
 {
-ft_print_middle(middle_widht);
-if(height > 0)
+	int iterator;
+	iterator = 1;
+if (height > 1 )
 {
-ft_print_height(--height,middle_widht);
-}
-}
 
+}
+while (iterator++ < height - 1)
+	{
+    ft_print_middle(middle_widht,'e',' ');
+	}		
+
+}
+void ft_print_top2(int  height,int middle_widht)
+{
+	int iterator;
+	iterator = 1;
+if (height > 1 )
+{
+
+}
+while (iterator++ < heigh - 1)
+	{
+    ft_print_middle(middle_widht,'A','B');
+	}		
+
+}
 void ft_rush(int height,int widht)
 {
-ft_print_top(widht,'A');
-ft_print_height(height,widht);
-ft_print_top(widht,'C');
+if(widht == 0|| height == 0)
+{
+ft_print_fn(' ');
+}
+ else if(widht  > 0){
+ft_print_middle( height,'a','b');
 }
 
-
-
+if (widht  >  0)
+{
+ft_print_height(height,widht);
+ft_print_top2( height,widht - 1);
+}
+}
 int main(void)
 {
-	ft_rush(100,100);
+	ft_rush(1,1);
 }
+
