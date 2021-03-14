@@ -13,7 +13,7 @@ void	ft_print_top(int squar_witdh,char corner,char center)
 	int iterator;
 	iterator = 1;
       ft_print_fn(center);
-	while (++iterator  <= squar_witdh )
+	while (++iterator  <= squar_witdh - 1)
 		{ 	
     		ft_print_fn(corner);
 
@@ -39,6 +39,11 @@ ft_print_top(widht ,' ','|');
 }
 void rush(widht,heigh)
 {
+
+if(heigh > 0  && widht> 0)
+{
+
+
 if(heigh == 1  && heigh == 1)
 {
 ft_print_top(widht ,'-','o');
@@ -50,13 +55,10 @@ fit_replcate_middle(heigh - 1,widht);
 ft_print_top(widht,'-','o');
 }
 }
-
-
-
-
+}
 int main(void)
 {
-rush(1,5);
+rush(5,5);
 
 
 }
