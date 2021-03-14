@@ -30,24 +30,33 @@ void	ft_print_top(int squar_witdh,char corner,char center)
 
 void fit_replcate_middle(int times,int widht)
 {
-int iterator = 0;
+int iterator = 1;
 while(iterator < times )
 {
 iterator++;
-ft_print_top(widht - 1,'b','a');
-
+ft_print_top(widht ,' ','|');
 }
 }
 void rush(widht,heigh)
 {
-ft_print_top(widht,'a','b');
-fit_replcate_middle(heigh - 2,widht);
-
+if(heigh == 1  && heigh == 1)
+{
+ft_print_top(widht ,'-','o');
+}	
+else if(heigh >= 1)
+{
+ft_print_top(widht,'-','o');
+fit_replcate_middle(heigh - 1,widht);
+ft_print_top(widht,'-','o');
 }
+}
+
 
 
 
 int main(void)
 {
-	fit_replcate_middle(5,5);
+rush(1,5);
+
+
 }
