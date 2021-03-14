@@ -6,12 +6,12 @@
 /*   By: jean-phil <jemartel@student.42quebec>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/14 15:46:11 by jean-phil         #+#    #+#             */
-/*   Updated: 2021/03/14 17:10:22 by jean-phil        ###   ########.fr       */
+/*   Updated: 2021/03/14 17:14:36 by jean-phil        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "unistd.h"
 
-void	rush(int, int);
+void	rush(int x, int y);
 
 int 	main(void)
 {
